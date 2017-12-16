@@ -38,6 +38,7 @@ color "energy" .1960 .1960 .2745 1.
 color "fuel" .2745 .2156 0. 1.
 
 color "volume" .6 .6 .6 .75
+color "panel background" 0. 0. 0. .4
 
 # not in current master. testing.
 color "boarding messages" .5 .5 .5 1.
