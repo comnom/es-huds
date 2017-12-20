@@ -10,11 +10,13 @@
 
 
 
-
+# Custom colors
 # Fully opaque or the element color bleeds through.
-color "pug hud bright" .75 .75 .75 1.
-color "pug hud medium" .5 .5 .5 1.
-color "pug hud dim" .25 .25 .25 1.
+color "pug hud hover" 1. 1. 1. 1.
+
+color "pug hud bright" .8 .8 .8 1.
+color "pug hud medium" .55 .55 .55 1.
+color "pug hud dim" .3 .3 .3 1.
 color "pug hud faint" .1 .1 .1 1.
 
 # 050 050 070 255
@@ -29,8 +31,20 @@ color "drag select" .2745 .2156 0. 1.
 # 070 000 000 255
 color "pug hud heat" .2745 0. 0. 1.
 
-# Didn't want to override these in case one day they get
-# used elsewhere, but escorts need them.
+
+
+# Global overrides
+# Didn't want to override these as they get used in
+# many places, but there's no choice. This also makes
+# the plugin incompatible with any other UI plugin.
+color "hover" 1. 1. 1. 1.
+color "active" .8 .8 .8 1.
+color "inactive" .3 .3 .3 1.
+color "bright" .8 .8 .8 1.
+color "medium" .55 .55 .55 1.
+color "dim" .3 .3 .3 1.
+color "faint" .1 .1 .1 1.
+
 color "shields" .1960 .1960 .2745 1.
 color "hull" .2745 .2156 0. 1.
 color "heat" .2745 0. 0. 1.
@@ -304,7 +318,7 @@ interface "boarding"
 		dimensions 70 30
 		color "pug hud medium"
 		inactive "pug hud dim"
-		hover "pug hud bright"
+		hover "pug hud hover"
 	
 	active if "can exit"
 	button x "_Done"
@@ -312,7 +326,7 @@ interface "boarding"
 		dimensions 70 30
 		color "pug hud medium"
 		inactive "pug hud dim"
-		hover "pug hud bright"
+		hover "pug hud hover"
 	
 	active if "can capture"
 	button c "Attempt _Capture"
@@ -320,7 +334,7 @@ interface "boarding"
 		dimensions 140 30
 		color "pug hud medium"
 		inactive "pug hud dim"
-		hover "pug hud bright"
+		hover "pug hud hover"
 	
 	active if "can attack"
 	button a "_Attack"
@@ -328,7 +342,7 @@ interface "boarding"
 		dimensions 80 30
 		color "pug hud medium"
 		inactive "pug hud dim"
-		hover "pug hud bright"
+		hover ""pug hud hover"
 	
 	active if "can defend"
 	button d "_Defend"
@@ -336,7 +350,7 @@ interface "boarding"
 		dimensions 80 30
 		color "pug hud medium"
 		inactive "pug hud dim"
-		hover "pug hud bright"
+		hover "pug hud hover"
 		
 		
 		
@@ -352,7 +366,7 @@ interface "hail panel"
 		dimensions 80 30
 		color "pug hud medium"
 		inactive "pug hud dim"
-		hover "pug hud bright"
+		hover "pug hud hover"
 
 	active if "can bribe"
 	button b "Offer _Bribe"
@@ -360,7 +374,7 @@ interface "hail panel"
 		dimensions 140 30
 		color "pug hud medium"
 		inactive "pug hud dim"
-		hover "pug hud bright"
+		hover "pug hud hover"
 		
 	visible if "show dominate"
 	active if "can dominate"
@@ -369,14 +383,14 @@ interface "hail panel"
 		dimensions 140 30
 		color "pug hud medium"
 		inactive "pug hud dim"
-		hover "pug hud bright"
+		hover "pug hud hover"
 	visible if "show relinquish"
 	button t "Relinquish _Tribute"
 		center -20 115
 		dimensions 140 30
 		color "pug hud medium"
 		inactive "pug hud dim"
-		hover "pug hud bright"
+		hover "pug hud hover"
 	visible if "show assist"
 	active if "can assist"
 	button h "Ask For _Help"
@@ -384,7 +398,7 @@ interface "hail panel"
 		dimensions 140 30
 		color "pug hud medium"
 		inactive "pug hud dim"
-		hover "pug hud bright"
+		hover "pug hud hover"
 		
 		
 		
